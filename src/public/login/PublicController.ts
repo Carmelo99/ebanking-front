@@ -7,8 +7,8 @@ interface PublicControllerType {
 }
 
 export function PublicController(): PublicControllerType {
-  const axiosLogin = (user:LoginDto) => {
-    return axios.post(Endpoints.AUTHENTICATE, user);
+  const axiosLogin = (data:LoginDto) => {
+    return axios.post(Endpoints.AUTHENTICATE, data);
   };
 
   return { axiosLogin };

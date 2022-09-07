@@ -2,7 +2,7 @@ import React from 'react'
 
 function PrivateRoute() {
   return (
-    <div></div>
+    <div>PRIVATE ROUTE</div>
   )
 }
 
