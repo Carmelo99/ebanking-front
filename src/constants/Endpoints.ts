@@ -6,7 +6,7 @@ const getUrl = () => {
   const Endpoints = {
     AUTHENTICATE: getUrl() + "/authenticate",
     RESET_PASSWORD: getUrl() + "/reset-password",
-    LOGOUT: getUrl() + "/worker/logout",
+    LOGOUT: getUrl() + "/logout",
     WORKER: getUrl() + "/worker",
     TEMPLATE: getUrl() + "/template",
     PARAMETER: getUrl() + "/parameter",
