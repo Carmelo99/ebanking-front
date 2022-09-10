@@ -12,11 +12,9 @@ export default function PublicService(): PublicServiceType {
     const {  authData,updateAuthData } = useAppContext();
 
     const login = (values: any, actions: any) => {
-      console.log(values.username,values.password);
         axiosLogin(values)
           .then((result: any) => {
             console.log(result.data.data);
-            console.log(authData);
             updateAuthData(result.data.data);
           })
           .catch((error: any) => {

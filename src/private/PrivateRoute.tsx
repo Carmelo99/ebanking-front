@@ -9,7 +9,7 @@ import { useAppContext } from "../context/AuthContext";
 
 export default function PrivateRoute() {
   const { authData } = useAppContext();
-  const isAdmin = authData?.user?.admin?.valueOf;
+  const isAdmin = authData?.user.admin;
 
   return (
     <>
