@@ -43,10 +43,10 @@ function Navbar() {
               My transactions
             </Link>
             <Link to="/bill"  className={classes.link}>
-              Bill
+              Bill pay
             </Link>
             <Link to="/credit"  className={classes.link}>
-              Credit
+              Credit apply
             </Link>
             <Link to="/info"  className={classes.link}>
               Informations
