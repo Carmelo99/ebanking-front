@@ -18,12 +18,15 @@ import DrawerComponent from "../drawer/DrawerComponent";
 import { PrivateService, PrivateServiceType } from "../PrivateService";
 import { ListItemButton } from "@mui/material";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { useAppContext } from "../../context/AuthContext";
 
 function Navbar() {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const {logout} : PrivateServiceType = PrivateService();
+  const { authData } = useAppContext();
+  const isAdmin = authData?.user.admin;
 
   return (
     <AppBar position="static">
@@ -48,9 +51,11 @@ function Navbar() {
             <Link to="/credit"  className={classes.link}>
               Credit apply
             </Link>
+            {isAdmin &&
             <Link to="/info"  className={classes.link}>
               Informations
             </Link>
+            }
             <List>
             <ListItemButton onClick={logout}>
             <ListItemText primary={"LOGOUT"} />
