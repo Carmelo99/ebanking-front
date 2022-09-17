@@ -49,7 +49,7 @@ const tableIcons = {
 
 function Transactions() {
   const classes = useStyles();
-  const {usersData,loading} : InformationsServiceType = InformationsService();
+  const {usersData,loading,tableActions} : InformationsServiceType = InformationsService();
   return (
     <>
     <CssBaseline />
@@ -95,6 +95,7 @@ function Transactions() {
       data={usersData}
       icons={tableIcons}
       title={"Korisnici"}
+      actions={tableActions}
       isLoading={loading}
       options={{
         actionsColumnIndex: -1,
