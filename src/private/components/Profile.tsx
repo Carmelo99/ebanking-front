@@ -21,9 +21,62 @@ import { FormControl, InputAdornment, InputLabel, MenuItem, Select, TextField } 
 import { Form, Formik } from 'formik';
 import * as yup from "yup";
 import useStyles from "./styles/ProfileStyle";
-import SearchIcon from "@mui/icons-material/Search";
-import { SelectChangeEvent } from '@mui/material';
-import { useDataGridProps } from '@mui/x-data-grid/DataGrid/useDataGridProps';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
+
+//CHART
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: 'Bill/Credit',
+    },
+  },
+};
+
+const labels = ['Total'];
+//CHART
+
+//CHART
+const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Bill',
+      data: labels.map(() => 1),
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Credit',
+      data: labels.map(() => 2),
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
+//CHART
+
 
 function Copyright(props: any) {
   return (
@@ -46,10 +99,29 @@ interface FilterDataType {
 function PricingContent() {
   const { authData } = useAppContext();
   const imePrezime = authData?.user.firstname+" "+authData?.user.lastname;
-  const {quotes, getCurrencies, newValue} : ProfileServiceType = ProfileService();
+  const {quotes, getCurrencies, newValue, total} : ProfileServiceType = ProfileService();
   const iznos = authData?.user.monthly_income;
   const classes = useStyles();
 const [filterData, setFilterData] = useState<FilterDataType>();
+
+//CHART
+const data = {
+  labels,
+  datasets: [
+    {
+      label: 'Bill',
+      data: labels.map(() => total[0]),
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    },
+    {
+      label: 'Credit',
+      data: labels.map(() => total[1]),
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+  ],
+};
+//CHART
+
 
   const validationSchema = yup.object().shape({
     payment_purpose: yup.string().required("Svra uplate je obavezno polje"),
@@ -210,6 +282,9 @@ const [filterData, setFilterData] = useState<FilterDataType>();
           {/* ) */}
           {/* )} */}
         </Grid>
+      </Container>
+      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+       <Bar options={options} data={data} />;
       </Container>
       {/* Footer */}
       <Container
