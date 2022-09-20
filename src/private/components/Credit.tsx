@@ -44,17 +44,22 @@ const handleSearch = (values: any) => {
                 >
                   {({ handleChange, values }) => (
                     <Form className={classes.form}>
-                        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                        <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="type"
                             name="type"
                             placeholder="Unesite tip kredita"
                             variant="standard"
                             label={"Tip kredita"}
+                            InputLabelProps={{style:{color:"white"}}}
                             value={values.type}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />
@@ -63,17 +68,22 @@ const handleSearch = (values: any) => {
                             }}
                           />
                         </Box>
-                        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                        <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="amount"
                             name="amount"
                             placeholder="Unesite iznos"
                             variant="standard"
                             label={"Iznos"}
+                            InputLabelProps={{style:{color:"white"}}}
                             value={values.amount}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />

@@ -29,7 +29,7 @@ function Navbar() {
   const isAdmin = authData?.user.admin;
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.wrapper}>
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
@@ -56,11 +56,13 @@ function Navbar() {
               Informations
             </Link>
             }
-            <List>
+            {/* <List> */}
+            <div className={classes.link}>
             <ListItemButton onClick={logout}>
             <ListItemText primary={"LOGOUT"} />
           </ListItemButton>
-            </List>
+          </div>
+            {/* </List> */}
           </div>
           
         )}

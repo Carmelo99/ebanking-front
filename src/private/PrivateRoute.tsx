@@ -14,6 +14,12 @@ export default function PrivateRoute() {
   return (
     <>
     <Navbar />
+    <div style={{ 
+      backgroundImage: `url("https://www.civista.bank/assets/img/search-background.png")`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+    }}>
       <Switch>
         <Route exact path="/" component={Profile} />
         <Route path="/transactions" component={Transactions} />
@@ -21,6 +27,7 @@ export default function PrivateRoute() {
         <Route path="/credit" component={Credit} />
         {isAdmin && <Route path="/info" component={Informations} />}
       </Switch>
+      </div>
       </>
   );
 

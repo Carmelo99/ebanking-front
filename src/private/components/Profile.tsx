@@ -57,30 +57,12 @@ export const options = {
 };
 
 const labels = ['Total'];
-//CHART
 
-//CHART
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Bill',
-      data: labels.map(() => 1),
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Credit',
-      data: labels.map(() => 2),
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
-//CHART
 
 
 function Copyright(props: any) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="white" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="http://localhost/">
         Ebanking application
@@ -156,7 +138,7 @@ const data = {
 
   return (
     <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' }}}/>
       <CssBaseline />
       <AppBar
         position="static"
@@ -171,17 +153,17 @@ const data = {
           component="h1"
           variant="h2"
           align="center"
-          color="text.primary"
+          color="white"
           gutterBottom
         >
          Welcome, {imePrezime}
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
+        <Typography variant="h5" align="center" color="white" component="p">
           {quotes}
         </Typography>
       </Container>
       {/* End hero unit */}
-      <Container maxWidth="md" component="main">
+      <Container maxWidth="md" component="main" sx={{ pt: 10 }}>
         <Grid container spacing={5} alignItems="flex-end">
           {/* {tiers.map((tier) => ( */}
             <Grid
@@ -283,8 +265,8 @@ const data = {
           {/* )} */}
         </Grid>
       </Container>
-      <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
-       <Bar options={options} data={data} />;
+      <Container disableGutters maxWidth="sm" component="main" sx={{  pt: 30, pb: 6 }}>
+       <Bar options={options} data={data} style={{backgroundColor:'rgba(255,255,255,1)', borderRadius:'12px'}}/>;
       </Container>
       {/* Footer */}
       <Container

@@ -3,6 +3,9 @@ import Colors from "../../constants/Colors";
 
 
 const useStyles = makeStyles((theme) => ({
+    wrapper: {
+      backgroundColor: Colors.OBSERVATORY
+    },
     navlinks: {
       marginLeft: theme.spacing(10),
       display: "flex",
@@ -15,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
       color: "white",
       fontSize: "20px",
-      marginLeft: theme.spacing(20),
+      marginLeft: theme.spacing(15),
       "&:hover": {
-        color: "yellow",
+        color: "#FAD4FF",
         borderBottom: "1px solid white",
       },
     },

@@ -51,17 +51,22 @@ const handleSearch = (values: any) => {
                 >
                   {({ handleChange, values }) => (
                     <Form className={classes.form}>
-                      <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                      <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="payment_purpose"
                             name="payment_purpose"
                             placeholder="Unesite svrhu uplate"
                             variant="standard"
                             label={"Svrha uplate"}
+                            InputLabelProps={{style:{color:"white"}}}
                             value={values.payment_purpose}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />
@@ -70,17 +75,22 @@ const handleSearch = (values: any) => {
                             }}
                           />
                         </Box>
-                        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                        <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="receiver"
                             name="receiver"
                             label={"Unesite primaoca"}
+                            InputLabelProps={{style:{color:"white"}}}
                             placeholder={"Primalac"}
                             variant="standard"
                             value={values.receiver}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />
@@ -89,17 +99,22 @@ const handleSearch = (values: any) => {
                             }}
                           />
                         </Box>
-                        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                        <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="type"
                             name="type"
                             placeholder="Unesite tip racuna"
                             variant="standard"
                             label={"Tip racuna"}
+                            InputLabelProps={{style:{color:"white"}}}
                             value={values.type}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />
@@ -108,17 +123,22 @@ const handleSearch = (values: any) => {
                             }}
                           />
                         </Box>
-                        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                        <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
                             id="amount"
                             name="amount"
                             placeholder="Unesite iznos"
                             variant="standard"
                             label={"Iznos"}
+                            InputLabelProps={{style:{color:"white"}}}
                             value={values.amount}
                             onChange={handleChange}
                             fullWidth
                             InputProps={{
+                              style : {
+                                color: "white",
+                                fontSize:"20px"
+                              },
                               startAdornment: (
                                 <InputAdornment position="start">
                                   <SearchIcon />

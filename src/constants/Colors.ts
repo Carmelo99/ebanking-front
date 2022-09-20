@@ -3,7 +3,7 @@ const Colors = {
     BLACK: "#000000",
     SILVER_SAND: "#C4C4C4",
     ERROR_RED: "#D32F2F",
-    OBSERVATORY: "#008A73",
+    OBSERVATORY: "#4CC6FF",
     GREEN_1: "#476f59",
     GREEN_2: "#669d7f",
     GREEN_3: "#95bba6",
