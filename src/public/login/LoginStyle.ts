@@ -2,6 +2,9 @@ import makeStyles from "@mui/styles/makeStyles";
 import Colors from "../../constants/Colors";
 
 const useStyles = makeStyles((theme) => ({
+  wrapper: {
+    backgroundColor: Colors.OBSERVATORY
+  },
   paper: {
     display: "flex",
     flexDirection: "column",
@@ -27,18 +30,18 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
     color: Colors.WHITE,
     textDecoration: "none",
-    // [theme.breakpoints.up("sm")]: {
-    //   display: "block",
-    // },
-    // [theme.breakpoints.up("lg")]: {
-    //   display: "block",
-    // },
-    // [theme.breakpoints.up("xs")]: {
-    //   display: "block",
-    // },
-    // [theme.breakpoints.up("xl")]: {
-    //   display: "block",
-    // },
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: "block",
+    },
+    [theme.breakpoints.up("xs")]: {
+      display: "block",
+    },
+    [theme.breakpoints.up("xl")]: {
+      display: "block",
+    },
   },
 }));
 

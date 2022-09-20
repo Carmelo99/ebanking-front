@@ -1,4 +1,4 @@
-import { Box, Button, Container, CssBaseline, Grid, TextField, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Container, CssBaseline, Grid, TextField, Toolbar, Typography } from '@mui/material'
 import { Form, Formik } from 'formik'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -25,17 +25,25 @@ function Login() {
   return (
     <>
       <Toolbar style={{ backgroundColor: Colors.OBSERVATORY }}>
-        <Grid container direction="row">
-          <Grid item xs={12} sm={12} md={4} lg={4} xl={2}>
-            <Link to="/" className={classes.link}>
-              <Typography textAlign={"center"} variant="h6" className={classes.title}>
-                {"EBANKING APPLICATION"}
+        {/* <Grid container direction="row"> */}
+          {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={2}> */}
+            {/* <Link to="/" className={classes.link}> */}
+              <Typography variant="h4" className={classes.title}>
+                Ebanking application
               </Typography>
-            </Link>
-          </Grid>
-          <Grid item xs={0} sm={0} md={8} lg={8} xl={10} />
-        </Grid>
+            {/* </Link> */}
+          {/* </Grid> */}
+          {/* <Grid item xs={0} sm={0} md={8} lg={8} xl={10} /> */}
+        {/* </Grid> */}
       </Toolbar>
+      <div
+       style={{ 
+        backgroundImage: `url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3773.jpg?w=2000")`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
+      >
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -88,6 +96,7 @@ function Login() {
           </Formik>
         </div>
       </Container>
+      </div>
     </>
   )
 }
