@@ -5,6 +5,7 @@ import MaterialTable from "material-table";
 import { useState } from "react";
 import useStyles from "./styles/TransactionsStyle";
 import TransactionsService, { TransactionsServiceType } from './service/TransactionsService';
+import PatchedPagination from "./patched-pagination/PatchedPagination";
 
 // TABLE ICONS
 import { forwardRef } from 'react';
@@ -54,6 +55,9 @@ function Transactions() {
     <>
     <CssBaseline />
     <MaterialTable
+    components={{
+      Pagination: PatchedPagination,
+     }}
       columns={[
         {
           field: "id",
