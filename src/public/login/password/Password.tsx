@@ -38,7 +38,7 @@ function Password(props: PasswordProps) {
           {label}
         </InputLabel>
         <Input
-          style={{ paddingLeft: 0 }}
+          style={{ paddingLeft: 0, color:"white" }}
           type={showText ? "text" : "password"}
           name={name}
           id={name}
