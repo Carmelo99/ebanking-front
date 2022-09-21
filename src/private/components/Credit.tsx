@@ -42,7 +42,7 @@ const handleSearch = (values: any) => {
                   validationSchema={validationSchema}
                   onSubmit={handleSearch}
                 >
-                  {({ handleChange, values }) => (
+                  {({ handleChange, handleBlur, touched, errors, values }) => (
                     <Form className={classes.form}>
                         <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
@@ -54,7 +54,10 @@ const handleSearch = (values: any) => {
                             InputLabelProps={{style:{color:"white"}}}
                             value={values.type}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.type && Boolean(errors.type)}
+                            helperText={touched.type && errors.type}
                             InputProps={{
                               style : {
                                 color: "white",
@@ -78,7 +81,10 @@ const handleSearch = (values: any) => {
                             InputLabelProps={{style:{color:"white"}}}
                             value={values.amount}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.amount && Boolean(errors.amount)}
+                            helperText={touched.amount && errors.amount}
                             InputProps={{
                               style : {
                                 color: "white",

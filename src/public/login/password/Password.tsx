@@ -30,7 +30,7 @@ function Password(props: PasswordProps) {
         <InputLabel
           htmlFor={name}
           style={{
-            color: touchedPassword && errorsPassword ? Colors.ERROR_RED : "",
+            color: touchedPassword && errorsPassword ? Colors.ERROR_RED : "white",
             marginLeft: "-15px",
           }}
           required={required}
@@ -44,6 +44,7 @@ function Password(props: PasswordProps) {
           id={name}
           autoComplete="current-password"
           value={statePassword}
+          
           onChange={handleChange}
           onKeyDown={onKeyDown}
           onBlur={handleBlur}

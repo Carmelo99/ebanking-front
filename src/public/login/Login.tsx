@@ -38,10 +38,11 @@ function Login() {
       </Toolbar>
       <div
        style={{ 
-        backgroundImage: `url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3773.jpg?w=2000")`,
+        backgroundImage: `url("https://www.civista.bank/assets/img/search-background.png")`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        opacity: 0.9,
       }}
       >
       <Container component="main" maxWidth="xs">
@@ -64,7 +65,8 @@ function Login() {
                     margin="normal"
                     fullWidth
                     id="username"
-                    label={"USERNAME"}
+                    label={"Username"}
+                    InputLabelProps={{style:{color:"white"}}}
                     name="username"
                     autoComplete="username"
                     value={values.username}
@@ -72,22 +74,29 @@ function Login() {
                     onBlur={handleBlur}
                     error={touched.username && Boolean(errors.username)}
                     helperText={touched.username && errors.username}
+                    InputProps={{
+                      style : {
+                        color: "white",
+                        fontSize:"20px"
+                      }
+                    }}
                   />
                 </Box>
-                <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                <Box sx={{ display: "flex", alignItems: "flex-end", marginBottom:"10px" }}>
                   <KeyIcon sx={{ color: Colors.OBSERVATORY, mr: 1, my: 0.5 }} />
                   <Password
-                    label={"PASSWORD"}
+                    label={"Password"}
                     name="password"
                     statePassword={values.password}
                     handleChange={handleChange}
                     handleBlur={handleBlur}
                     touchedPassword={touched.password}
                     errorsPassword={errors.password}
+                    
                   />
                 </Box>
                 <div className={classes.submit}>
-                  <Button type="submit" fullWidth variant="outlined" color="primary" className={classes.submit}>
+                  <Button type="submit" fullWidth variant="outlined" color="inherit" className={classes.submit}>
                     {"LOGIN"}
                   </Button>
                 </div>

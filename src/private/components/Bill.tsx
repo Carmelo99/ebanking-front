@@ -49,7 +49,7 @@ const handleSearch = (values: any) => {
                   validationSchema={validationSchema}
                   onSubmit={handleSearch}
                 >
-                  {({ handleChange, values }) => (
+                  {({ handleChange,handleBlur, touched, errors, values }) => (
                     <Form className={classes.form}>
                       <Box sx={{ display: "flex", alignItems: "flex-end",marginBottom:"15px" }}>
                           <TextField
@@ -61,7 +61,10 @@ const handleSearch = (values: any) => {
                             InputLabelProps={{style:{color:"white"}}}
                             value={values.payment_purpose}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.payment_purpose && Boolean(errors.payment_purpose)}
+                            helperText={touched.payment_purpose && errors.payment_purpose}
                             InputProps={{
                               style : {
                                 color: "white",
@@ -85,7 +88,10 @@ const handleSearch = (values: any) => {
                             variant="standard"
                             value={values.receiver}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.receiver && Boolean(errors.receiver)}
+                            helperText={touched.receiver && errors.receiver}
                             InputProps={{
                               style : {
                                 color: "white",
@@ -109,7 +115,10 @@ const handleSearch = (values: any) => {
                             InputLabelProps={{style:{color:"white"}}}
                             value={values.type}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.type && Boolean(errors.type)}
+                            helperText={touched.type && errors.type}
                             InputProps={{
                               style : {
                                 color: "white",
@@ -133,7 +142,10 @@ const handleSearch = (values: any) => {
                             InputLabelProps={{style:{color:"white"}}}
                             value={values.amount}
                             onChange={handleChange}
+                            onBlur={handleBlur}
                             fullWidth
+                            error={touched.amount && Boolean(errors.amount)}
+                            helperText={touched.amount && errors.amount}
                             InputProps={{
                               style : {
                                 color: "white",

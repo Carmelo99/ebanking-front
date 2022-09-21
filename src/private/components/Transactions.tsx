@@ -68,7 +68,7 @@ function Transactions() {
           title: "Tip transakcije",
           render: (rowData:any) => {
             //DODATI OSTALE OPCIJE SEM RACUN PREDUZECA
-            if(rowData.type.type==="Racun preduzeca") {
+            if(rowData.type.type==="Racun preduzeca" || rowData.type.type==="Placanje skolarine" || rowData.type.type==="Placanje racuna za stan") {
               return "Racun";
             }
             return "Kredit";

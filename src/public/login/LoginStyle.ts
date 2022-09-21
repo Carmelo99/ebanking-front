@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     marginLeft: "auto",
     marginRight: "auto",
+    color: Colors.WHITE,
   },
   link: {
     color: Colors.WHITE,

@@ -29,7 +29,7 @@ function Navbar() {
   const isAdmin = authData?.user.admin;
 
   return (
-    <AppBar position="fixed" className={classes.wrapper}>
+    <AppBar position="static" className={classes.wrapper}>
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
