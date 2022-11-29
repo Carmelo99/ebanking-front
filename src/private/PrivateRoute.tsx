@@ -6,6 +6,9 @@ import Credit from "./components/Credit";
 import Informations from "./components/Informations";
 import { Route, Switch } from "react-router-dom";
 import { useAppContext } from "../context/AuthContext";
+import BankCards from "./components/BankCards";
+import Insurances from "./components/Insurances";
+import MoneyTransfer from "./components/MoneyTransfer";
 
 export default function PrivateRoute() {
   const { authData } = useAppContext();
@@ -25,6 +28,9 @@ export default function PrivateRoute() {
         <Route path="/transactions" component={Transactions} />
         <Route path="/bill" component={Bill} />
         <Route path="/credit" component={Credit} />
+        <Route path="/card" component={BankCards} />
+        <Route path="/insurances" component={Insurances} />
+        <Route path="/transfer" component={MoneyTransfer} />
         {isAdmin && <Route path="/info" component={Informations} />}
       </Switch>
       </div>

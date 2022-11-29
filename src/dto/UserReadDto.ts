@@ -6,4 +6,6 @@ export default interface UserReadDto {
     lastname:string;
     admin:boolean;
     monthly_income:number;
+    amount:number;
+    insurance_number:number;
   }

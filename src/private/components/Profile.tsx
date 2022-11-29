@@ -82,7 +82,7 @@ function PricingContent() {
   const { authData } = useAppContext();
   const imePrezime = authData?.user.firstname+" "+authData?.user.lastname;
   const {quotes, getCurrencies, newValue, total} : ProfileServiceType = ProfileService();
-  const iznos = authData?.user.monthly_income;
+  const iznos = authData?.user.amount;
   const classes = useStyles();
 const [filterData, setFilterData] = useState<FilterDataType>();
 

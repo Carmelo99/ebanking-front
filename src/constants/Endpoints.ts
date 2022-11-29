@@ -12,6 +12,8 @@ const getUrl = () => {
     BILL: getUrl() + "/bill",
     CREDIT: getUrl() + "/credit",
     USERS: getUrl() + "/users",
+    BANK_CARD: getUrl() + "/bank-card",
+    INSURANCE: getUrl() + "/insurance"
   };
   
   export default Endpoints;

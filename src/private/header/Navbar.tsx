@@ -51,6 +51,15 @@ function Navbar() {
             <Link to="/credit"  className={classes.link}>
               Credit apply
             </Link>
+            <Link to="/card" className={classes.link}>
+              Bank cards
+            </Link>
+            <Link to="/insurances" className={classes.link}>
+              Insurances
+            </Link>
+            <Link to="/transfer" className={classes.link}>
+              Money transfer
+            </Link>
             {isAdmin &&
             <Link to="/info"  className={classes.link}>
               Informations
